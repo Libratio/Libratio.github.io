@@ -1,0 +1,190 @@
+@import './reset';
+@import './common';
+
+
+
+body{
+    --themeColor:#2F4C79;
+    --themeTable:#EBF0F6;
+    --dangerColor:#FF5C00;
+    --themenBackground: linear-gradient(84deg, #a19fff33 0%, #2278ff33 52.6%, #56d6ff33 100%);
+    --background:linear-gradient(84deg, #A19FFF 0%, #2278FF 52.6%, #56D6FF 100%);
+}
+// 模块样式
+.block-shadow{
+    border-radius: 8px;
+    background: #FFF;
+    box-shadow: 0 0 25px 0 #1448951a;
+}
+
+.pull-right{
+    float: right;
+}
+.pull-left{
+    float: left;
+}
+
+.btn-default{
+    background: linear-gradient(84deg, #a19fff33 0%, #2278ff33 52.6%, #56d6ff33 100%);
+    color:var(--themeColor) !important;
+    border: none !important;
+    border-radius: 8px;
+    &:hover{
+        background: linear-gradient(84deg, #a19fff33 0%, #2278ff33 52.6%, #56d6ff33 100%);
+    }
+    &.is-disabled{
+        border: 1px solid #e4e7ed !important;
+    }
+}
+.btn-primary{
+    border-radius: 8px;
+    background: linear-gradient(84deg, #A19FFF 0%, #2278FF 52.6%, #56D6FF 100%);
+    border: none !important;
+    color: #fff !important;
+    &.is-disabled{
+        color: var(--themeColor) !important;
+    }
+}
+
+.btn-dark{
+    border-radius: 8px;
+    background: #EBF0F6 !important;
+    color:var(--themeColor) !important;
+    border: none !important;
+}
+
+.btn-large{
+    border-radius: 8px;
+    height: 36px !important;
+    min-width: 100px;
+}
+
+.flex-between-center{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.flex-start-center{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.flex-start-start{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.flex-column-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.text-ellipsis{
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+    
+
+.student-table{
+    border-radius: 8px 8px 0 0 !important;
+    font-size: 14px;
+    thead{
+        th{
+            height: 52px;
+            color: var(--themeColor) !important;
+            background: var(--themeTable) !important;
+        }
+    }
+    tr{
+        height: 44px !important;
+    }
+
+    &.el-table--striped .el-table__body tr.el-table__row--striped td.el-table__cell{
+        background: var(--themeTable) !important;
+    }
+}
+
+.link-danger{
+    color: var(--dangerColor) !important;
+}
+
+
+// 学生端弹窗自定义
+.student-dialog{
+   .el-dialog__title{
+        font-weight: bold !important;
+        color: var(--themeColor)
+    }
+}
+
+.customer-scroll{
+    overflow: auto;
+}
+.customer-scroll::-webkit-scrollbar{ 
+    width: 5px; 
+    background: transparent; 
+    box-shadow: none;
+}
+
+
+.customer-scroll:hover::-webkit-scrollbar{ 
+    width: 5px; 
+    background: transparent;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2) 
+ }
+
+.customer-scroll::-webkit-scrollbar-track { 
+    width: 5px; 
+    background: transparent; 
+    box-shadow: none;
+}
+
+.customer-scroll:hover::-webkit-scrollbar-track { 
+    width: 5px; 
+    background: rgba(255, 255,255, 0); 
+    box-shadow: none;
+}
+.customer-scroll::-webkit-scrollbar-thumb{ 
+    width: 5px; 
+    background: transparent; 
+    box-shadow: none;
+}
+
+.customer-scroll:hover::-webkit-scrollbar-thumb{ 
+    width: 5px; 
+    background: rgba(0, 0, 0, 0.22);; 
+    box-shadow: none;
+}
+    .customer_dialog{
+        padding: 0;
+        .el-dialog__header{
+            text-align: center;
+            width: 100%;
+            font-weight: bold;
+            padding-top: 24px;
+            font-size: 20px;
+        }
+    
+        .el-dialog__headerbtn{
+            right: -40px;
+            top: 0px;
+            width: 30px;
+            height: 30px;
+            background: url('@/assets/images/student/access/close.png');
+            background-size: 100% 100%;
+        }
+    
+        .el-dialog__footer{
+            box-shadow: 4px 0 12px 0 #0049b726;
+            padding: 14px 20px;
+        }
+    
+    }
+
+
+    .button-icon{
+        width: 16px;
+        height: 16px;
+    }
